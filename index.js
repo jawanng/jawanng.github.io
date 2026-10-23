@@ -198,6 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
       [02] <span class="green">Amazon / AWS</span> - Cloud Infrastructure Automation Leadership (Past)<br>
       [03] <span class="green">Sparkle Squad</span> - Business Operations Platform Architecture (Active)<br>
       [04] <span class="green">Angel Investing & Mentorship</span> - inSTEM mentor, Black Angel Group (Active)<br>
+      [05] <span class="green">Persephone Homelab</span> - Self-hosted automation & agent platform (Active)<br>
       <br>
       Type <span class="cyan">lab 1</span>, <span class="cyan">lab 2</span>, etc., to fetch detailed configurations.
     `,
@@ -263,6 +264,14 @@ document.addEventListener('DOMContentLoaded', () => {
       <span>ROLE: Angel Investor & STEM Mentor</span><br>
       <span>AFFILIATIONS: Black Angel Group (BAG), NSTMF inSTEM Mentor</span><br>
       <span>GOAL: Supporting underrepresented STEM students and funding early-stage seed startups.</span>
+    `,
+    "5": `
+      <span class="cyan">SPECIFICATIONS // PERSEPHONE HOMELAB</span><br>
+      -----------------------------------------------<br>
+      <span>HOST: Proxmox VE running LXC guests for Docker/Postgres, n8n, the Hermes agent service, and a GPU box for local LLM inference (RTX 5060 Ti, 16GB).</span><br>
+      <span>AUTOMATION: n8n workflows for site audits, business reporting, scheduled monitors and update discovery; Postgres is the shared task, approval and knowledge store.</span><br>
+      <span>AGENTS: Hermes (FastAPI + LangGraph) orchestrates work; Claude Code and Gemini CLIs are bridged in through per-agent forced-command SSH keys. Tier-3 actions need a human approval.</span><br>
+      <span>PRACTICES: nightly/weekly repo-synced exports of workflows and migrations, LXC snapshots before updates, secrets kept out of git, local-only handling for sensitive personal data.</span>
     `
   };
 
